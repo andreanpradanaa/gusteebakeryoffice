@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body {
+  @apply bg-cream-100 text-crust-900 font-sans antialiased;
+}
+.dark body { @apply bg-night-900 text-cream-100; }
+
+.scroll-thin { scrollbar-width: thin; scrollbar-color: rgba(139,90,43,0.35) transparent; }
+
+.pixel-border {
+  border: 3px solid #4A2F1A;
+  box-shadow: 4px 4px 0 0 rgba(74,47,26,0.35);
+}
+.dark .pixel-border { border-color: #8B5A2B; box-shadow: 4px 4px 0 0 rgba(0,0,0,0.5); }
+
+/* Markdown hasil kerja */
+.md { font-size: 0.875rem; line-height: 1.6; overflow-wrap: anywhere; }
+.md h1, .md h2 { font-weight: 700; font-size: 1rem; margin: 1rem 0 0.4rem; color: #6B4423; }
+.md h3, .md h4 { font-weight: 600; font-size: 0.925rem; margin: 0.8rem 0 0.3rem; color: #8B5A2B; }
+.dark .md h1, .dark .md h2 { color: #F3D9B5; }
+.dark .md h3, .dark .md h4 { color: #D9A066; }
+.md p { margin: 0.4rem 0; }
+.md ul { list-style: disc; padding-left: 1.25rem; margin: 0.4rem 0; }
+.md ol { list-style: decimal; padding-left: 1.25rem; margin: 0.4rem 0; }
+.md li { margin: 0.15rem 0; }
+.md strong { font-weight: 700; }
+.md em { font-style: italic; }
+.md code { background: rgba(139,90,43,0.12); padding: 0 0.25rem; border-radius: 4px; font-size: 0.8em; }
+.md hr { border-color: rgba(139,90,43,0.25); margin: 0.8rem 0; }
+.md blockquote { border-left: 3px solid #FFB89A; padding-left: 0.6rem; color: #8B5A2B; }
+.md .table-wrap { overflow-x: auto; margin: 0.5rem 0; }
+.md table { border-collapse: collapse; font-size: 0.8rem; min-width: 100%; }
+.md th, .md td { border: 1px solid rgba(139,90,43,0.25); padding: 0.3rem 0.5rem; text-align: left; vertical-align: top; overflow-wrap: normal; word-break: normal; min-width: 5.5rem; max-width: 16rem; }
+.md td:first-child, .md th:first-child { min-width: 7rem; }
+.md th { background: rgba(255,184,154,0.25); font-weight: 600; }
+.dark .md th { background: rgba(255,184,154,0.12); }
+.md > :first-child { margin-top: 0; }
+
+@keyframes pop { from { transform: scale(0.96); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+.animate-pop { animation: pop 0.18s ease-out; }

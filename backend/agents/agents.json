@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ceo",
+    "name": "Raka",
+    "role": "Owner CEO",
+    "room": "owner",
+    "promptFile": "ceo.md",
+    "dataScopes": ["katalog", "penjualan"],
+    "worker": false
+  },
+  {
+    "id": "rnd",
+    "name": "Sari",
+    "role": "Recipe & R&D",
+    "room": "testkitchen",
+    "promptFile": "rnd.md",
+    "dataScopes": ["katalog", "resep"],
+    "worker": true
+  },
+  {
+    "id": "ops",
+    "name": "Pak Joko",
+    "role": "Operations (Kitchen Manager)",
+    "room": "kitchen",
+    "promptFile": "ops.md",
+    "dataScopes": ["stok"],
+    "worker": true
+  },
+  {
+    "id": "finance",
+    "name": "Bima",
+    "role": "Finance",
+    "room": "kasir",
+    "promptFile": "finance.md",
+    "dataScopes": ["katalog", "penjualan"],
+    "worker": true
+  },
+  {
+    "id": "marketing",
+    "name": "Nadia",
+    "role": "Marketing & Content",
+    "room": "studio",
+    "promptFile": "marketing.md",
+    "dataScopes": ["katalog", "penjualan"],
+    "worker": true
+  }
+]

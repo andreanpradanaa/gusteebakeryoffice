@@ -1,0 +1,216 @@
+{
+  "_catatan": "Data contoh Gustee Bakery. Ubah file ini lalu jalankan backend dengan flag -reseed (atau hapus gustee.db) untuk memuat ulang. Harga bahan dalam Rupiah per satuan (g / ml / butir / pcs).",
+  "ingredients": [
+    { "id": "tepung_tinggi", "name": "Tepung Terigu Protein Tinggi", "unit": "g", "price": 13, "stock": 42000, "min_stock": 20000, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "tepung_sedang", "name": "Tepung Terigu Protein Sedang", "unit": "g", "price": 12, "stock": 18000, "min_stock": 15000, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "maizena", "name": "Tepung Maizena", "unit": "g", "price": 25, "stock": 3500, "min_stock": 1500, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "butter", "name": "Butter (Mentega Wisman-style)", "unit": "g", "price": 110, "stock": 6500, "min_stock": 8000, "supplier": "PT Dairy Prima Nusantara" },
+    { "id": "margarin", "name": "Margarin Pastry", "unit": "g", "price": 35, "stock": 9000, "min_stock": 5000, "supplier": "PT Dairy Prima Nusantara" },
+    { "id": "gula_pasir", "name": "Gula Pasir", "unit": "g", "price": 16, "stock": 25000, "min_stock": 10000, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "gula_halus", "name": "Gula Halus", "unit": "g", "price": 20, "stock": 4000, "min_stock": 3000, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "telur", "name": "Telur Ayam", "unit": "butir", "price": 2200, "stock": 240, "min_stock": 150, "supplier": "Peternakan Ayam Berkah" },
+    { "id": "susu_cair", "name": "Susu Cair Full Cream", "unit": "ml", "price": 20, "stock": 12000, "min_stock": 6000, "supplier": "PT Dairy Prima Nusantara" },
+    { "id": "susu_bubuk", "name": "Susu Bubuk Full Cream", "unit": "g", "price": 120, "stock": 1800, "min_stock": 1500, "supplier": "PT Dairy Prima Nusantara" },
+    { "id": "ragi", "name": "Ragi Instan", "unit": "g", "price": 150, "stock": 900, "min_stock": 500, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "garam", "name": "Garam Halus", "unit": "g", "price": 5, "stock": 3000, "min_stock": 1000, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "keju_edam", "name": "Keju Edam", "unit": "g", "price": 200, "stock": 2500, "min_stock": 3000, "supplier": "PT Dairy Prima Nusantara" },
+    { "id": "keju_cheddar", "name": "Keju Cheddar", "unit": "g", "price": 110, "stock": 4000, "min_stock": 2500, "supplier": "PT Dairy Prima Nusantara" },
+    { "id": "cream_cheese", "name": "Cream Cheese", "unit": "g", "price": 150, "stock": 1500, "min_stock": 1000, "supplier": "PT Dairy Prima Nusantara" },
+    { "id": "whip_cream", "name": "Whipping Cream", "unit": "ml", "price": 70, "stock": 3000, "min_stock": 2000, "supplier": "PT Dairy Prima Nusantara" },
+    { "id": "selai_nanas", "name": "Selai Nanas Homemade", "unit": "g", "price": 60, "stock": 5000, "min_stock": 8000, "supplier": "UMKM Nanas Subang" },
+    { "id": "cokelat", "name": "Dark Chocolate Compound", "unit": "g", "price": 90, "stock": 5000, "min_stock": 3000, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "choco_chips", "name": "Choco Chips", "unit": "g", "price": 95, "stock": 2200, "min_stock": 1500, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "kayu_manis", "name": "Kayu Manis Bubuk", "unit": "g", "price": 200, "stock": 400, "min_stock": 200, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "blueberry", "name": "Blueberry Filling", "unit": "g", "price": 80, "stock": 2000, "min_stock": 1500, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "abon", "name": "Abon Sapi", "unit": "g", "price": 350, "stock": 1200, "min_stock": 1000, "supplier": "UMKM Abon Bu Tini" },
+    { "id": "pewarna_merah", "name": "Pewarna Merah (Red Velvet)", "unit": "g", "price": 300, "stock": 150, "min_stock": 100, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "kakao", "name": "Bubuk Kakao", "unit": "g", "price": 140, "stock": 1500, "min_stock": 800, "supplier": "Toko Bahan Kue Sumber Rejeki" },
+    { "id": "toples", "name": "Toples Kue 500g", "unit": "pcs", "price": 6500, "stock": 140, "min_stock": 150, "supplier": "CV Kemasan Cantik" },
+    { "id": "box_hampers", "name": "Box Hampers Premium", "unit": "pcs", "price": 28000, "stock": 35, "min_stock": 60, "supplier": "CV Kemasan Cantik" },
+    { "id": "box_cake", "name": "Box Cake 20cm", "unit": "pcs", "price": 9000, "stock": 60, "min_stock": 30, "supplier": "CV Kemasan Cantik" },
+    { "id": "plastik_roti", "name": "Plastik Roti + Klip", "unit": "pcs", "price": 600, "stock": 1500, "min_stock": 800, "supplier": "CV Kemasan Cantik" },
+    { "id": "pastry_box", "name": "Paper Box Pastry", "unit": "pcs", "price": 2500, "stock": 400, "min_stock": 300, "supplier": "CV Kemasan Cantik" },
+    { "id": "kartu_pita", "name": "Kartu Ucapan + Pita", "unit": "pcs", "price": 3500, "stock": 80, "min_stock": 100, "supplier": "CV Kemasan Cantik" }
+  ],
+  "recipes": [
+    {
+      "id": "roti_sobek", "name": "Roti Sobek Cokelat", "yield": 6, "yield_unit": "loyang",
+      "items": [
+        { "ingredient": "tepung_tinggi", "qty": 1000 }, { "ingredient": "gula_pasir", "qty": 150 },
+        { "ingredient": "ragi", "qty": 11 }, { "ingredient": "telur", "qty": 2 },
+        { "ingredient": "susu_cair", "qty": 550 }, { "ingredient": "butter", "qty": 100 },
+        { "ingredient": "garam", "qty": 8 }, { "ingredient": "cokelat", "qty": 300 },
+        { "ingredient": "plastik_roti", "qty": 6 }
+      ]
+    },
+    {
+      "id": "roti_tawar", "name": "Roti Tawar Susu", "yield": 4, "yield_unit": "loaf",
+      "items": [
+        { "ingredient": "tepung_tinggi", "qty": 1000 }, { "ingredient": "gula_pasir", "qty": 80 },
+        { "ingredient": "ragi", "qty": 11 }, { "ingredient": "susu_cair", "qty": 600 },
+        { "ingredient": "susu_bubuk", "qty": 40 }, { "ingredient": "butter", "qty": 80 },
+        { "ingredient": "garam", "qty": 15 }, { "ingredient": "plastik_roti", "qty": 4 }
+      ]
+    },
+    {
+      "id": "roti_abon", "name": "Roti Abon Sapi", "yield": 20, "yield_unit": "pcs",
+      "items": [
+        { "ingredient": "tepung_tinggi", "qty": 1000 }, { "ingredient": "gula_pasir", "qty": 120 },
+        { "ingredient": "ragi", "qty": 11 }, { "ingredient": "telur", "qty": 2 },
+        { "ingredient": "susu_cair", "qty": 500 }, { "ingredient": "butter", "qty": 100 },
+        { "ingredient": "garam", "qty": 8 }, { "ingredient": "abon", "qty": 400 },
+        { "ingredient": "plastik_roti", "qty": 20 }
+      ]
+    },
+    {
+      "id": "roti_keju", "name": "Roti Keju", "yield": 20, "yield_unit": "pcs",
+      "items": [
+        { "ingredient": "tepung_tinggi", "qty": 1000 }, { "ingredient": "gula_pasir", "qty": 120 },
+        { "ingredient": "ragi", "qty": 11 }, { "ingredient": "telur", "qty": 2 },
+        { "ingredient": "susu_cair", "qty": 500 }, { "ingredient": "butter", "qty": 100 },
+        { "ingredient": "garam", "qty": 8 }, { "ingredient": "keju_cheddar", "qty": 600 },
+        { "ingredient": "plastik_roti", "qty": 20 }
+      ]
+    },
+    {
+      "id": "croissant", "name": "Croissant Butter", "yield": 24, "yield_unit": "pcs",
+      "items": [
+        { "ingredient": "tepung_tinggi", "qty": 1000 }, { "ingredient": "gula_pasir", "qty": 100 },
+        { "ingredient": "ragi", "qty": 12 }, { "ingredient": "susu_cair", "qty": 500 },
+        { "ingredient": "butter", "qty": 600 }, { "ingredient": "garam", "qty": 18 },
+        { "ingredient": "telur", "qty": 2 }, { "ingredient": "pastry_box", "qty": 24 }
+      ]
+    },
+    {
+      "id": "pain_choco", "name": "Pain au Chocolat", "yield": 24, "yield_unit": "pcs",
+      "items": [
+        { "ingredient": "tepung_tinggi", "qty": 1000 }, { "ingredient": "gula_pasir", "qty": 100 },
+        { "ingredient": "ragi", "qty": 12 }, { "ingredient": "susu_cair", "qty": 500 },
+        { "ingredient": "butter", "qty": 600 }, { "ingredient": "garam", "qty": 18 },
+        { "ingredient": "cokelat", "qty": 480 }, { "ingredient": "pastry_box", "qty": 24 }
+      ]
+    },
+    {
+      "id": "cinnamon_roll", "name": "Cinnamon Roll", "yield": 18, "yield_unit": "pcs",
+      "items": [
+        { "ingredient": "tepung_tinggi", "qty": 1000 }, { "ingredient": "gula_pasir", "qty": 250 },
+        { "ingredient": "ragi", "qty": 11 }, { "ingredient": "telur", "qty": 2 },
+        { "ingredient": "susu_cair", "qty": 500 }, { "ingredient": "butter", "qty": 250 },
+        { "ingredient": "kayu_manis", "qty": 30 }, { "ingredient": "cream_cheese", "qty": 250 },
+        { "ingredient": "gula_halus", "qty": 150 }, { "ingredient": "pastry_box", "qty": 18 }
+      ]
+    },
+    {
+      "id": "danish_blueberry", "name": "Danish Blueberry", "yield": 24, "yield_unit": "pcs",
+      "items": [
+        { "ingredient": "tepung_tinggi", "qty": 1000 }, { "ingredient": "gula_pasir", "qty": 120 },
+        { "ingredient": "ragi", "qty": 12 }, { "ingredient": "telur", "qty": 3 },
+        { "ingredient": "susu_cair", "qty": 450 }, { "ingredient": "butter", "qty": 550 },
+        { "ingredient": "blueberry", "qty": 720 }, { "ingredient": "cream_cheese", "qty": 300 },
+        { "ingredient": "pastry_box", "qty": 24 }
+      ]
+    },
+    {
+      "id": "nastar", "name": "Nastar Premium", "yield": 2, "yield_unit": "toples 500g",
+      "items": [
+        { "ingredient": "tepung_sedang", "qty": 500 }, { "ingredient": "butter", "qty": 250 },
+        { "ingredient": "margarin", "qty": 100 }, { "ingredient": "gula_halus", "qty": 60 },
+        { "ingredient": "telur", "qty": 4 }, { "ingredient": "susu_bubuk", "qty": 30 },
+        { "ingredient": "maizena", "qty": 30 }, { "ingredient": "selai_nanas", "qty": 550 },
+        { "ingredient": "toples", "qty": 2 }
+      ]
+    },
+    {
+      "id": "kastengel", "name": "Kastengel Keju Edam", "yield": 2, "yield_unit": "toples 500g",
+      "items": [
+        { "ingredient": "tepung_sedang", "qty": 450 }, { "ingredient": "butter", "qty": 200 },
+        { "ingredient": "margarin", "qty": 150 }, { "ingredient": "keju_edam", "qty": 250 },
+        { "ingredient": "keju_cheddar", "qty": 100 }, { "ingredient": "telur", "qty": 4 },
+        { "ingredient": "susu_bubuk", "qty": 20 }, { "ingredient": "toples", "qty": 2 }
+      ]
+    },
+    {
+      "id": "putri_salju", "name": "Putri Salju", "yield": 2, "yield_unit": "toples 500g",
+      "items": [
+        { "ingredient": "tepung_sedang", "qty": 450 }, { "ingredient": "butter", "qty": 200 },
+        { "ingredient": "margarin", "qty": 150 }, { "ingredient": "gula_halus", "qty": 250 },
+        { "ingredient": "telur", "qty": 2 }, { "ingredient": "maizena", "qty": 80 },
+        { "ingredient": "susu_bubuk", "qty": 40 }, { "ingredient": "toples", "qty": 2 }
+      ]
+    },
+    {
+      "id": "lidah_kucing", "name": "Lidah Kucing", "yield": 2, "yield_unit": "toples 500g",
+      "items": [
+        { "ingredient": "tepung_sedang", "qty": 250 }, { "ingredient": "butter", "qty": 250 },
+        { "ingredient": "gula_halus", "qty": 250 }, { "ingredient": "telur", "qty": 6 },
+        { "ingredient": "susu_bubuk", "qty": 30 }, { "ingredient": "toples", "qty": 2 }
+      ]
+    },
+    {
+      "id": "choco_cookies", "name": "Choco Chip Cookies", "yield": 2, "yield_unit": "toples 500g",
+      "items": [
+        { "ingredient": "tepung_sedang", "qty": 400 }, { "ingredient": "butter", "qty": 200 },
+        { "ingredient": "gula_pasir", "qty": 150 }, { "ingredient": "telur", "qty": 2 },
+        { "ingredient": "choco_chips", "qty": 250 }, { "ingredient": "kakao", "qty": 30 },
+        { "ingredient": "toples", "qty": 2 }
+      ]
+    },
+    {
+      "id": "custom_cake", "name": "Custom Cake 20cm (Vanilla Buttercream)", "yield": 1, "yield_unit": "cake",
+      "items": [
+        { "ingredient": "tepung_sedang", "qty": 250 }, { "ingredient": "gula_pasir", "qty": 250 },
+        { "ingredient": "telur", "qty": 6 }, { "ingredient": "butter", "qty": 400 },
+        { "ingredient": "susu_cair", "qty": 150 }, { "ingredient": "gula_halus", "qty": 200 },
+        { "ingredient": "whip_cream", "qty": 200 }, { "ingredient": "box_cake", "qty": 1 }
+      ]
+    },
+    {
+      "id": "red_velvet", "name": "Red Velvet Cake 20cm", "yield": 1, "yield_unit": "cake",
+      "items": [
+        { "ingredient": "tepung_sedang", "qty": 280 }, { "ingredient": "gula_pasir", "qty": 250 },
+        { "ingredient": "telur", "qty": 4 }, { "ingredient": "butter", "qty": 150 },
+        { "ingredient": "susu_cair", "qty": 240 }, { "ingredient": "kakao", "qty": 20 },
+        { "ingredient": "pewarna_merah", "qty": 10 }, { "ingredient": "cream_cheese", "qty": 400 },
+        { "ingredient": "gula_halus", "qty": 150 }, { "ingredient": "box_cake", "qty": 1 }
+      ]
+    },
+    {
+      "id": "hampers_pack", "name": "Kemasan Hampers (box + kartu & pita)", "yield": 1, "yield_unit": "set",
+      "items": [
+        { "ingredient": "box_hampers", "qty": 1 }, { "ingredient": "kartu_pita", "qty": 1 }
+      ]
+    }
+  ],
+  "products": [
+    { "id": "roti_sobek", "name": "Roti Sobek Cokelat", "category": "Roti", "price": 35000, "unit": "loyang", "recipe": "roti_sobek", "base_daily_sales": 14 },
+    { "id": "roti_tawar", "name": "Roti Tawar Susu", "category": "Roti", "price": 28000, "unit": "loaf", "recipe": "roti_tawar", "base_daily_sales": 18 },
+    { "id": "roti_abon", "name": "Roti Abon Sapi", "category": "Roti", "price": 15000, "unit": "pcs", "recipe": "roti_abon", "base_daily_sales": 30 },
+    { "id": "roti_keju", "name": "Roti Keju", "category": "Roti", "price": 14000, "unit": "pcs", "recipe": "roti_keju", "base_daily_sales": 26 },
+    { "id": "croissant", "name": "Croissant Butter", "category": "Pastry", "price": 22000, "unit": "pcs", "recipe": "croissant", "base_daily_sales": 28 },
+    { "id": "pain_choco", "name": "Pain au Chocolat", "category": "Pastry", "price": 26000, "unit": "pcs", "recipe": "pain_choco", "base_daily_sales": 16 },
+    { "id": "cinnamon_roll", "name": "Cinnamon Roll", "category": "Pastry", "price": 24000, "unit": "pcs", "recipe": "cinnamon_roll", "base_daily_sales": 15 },
+    { "id": "danish_blueberry", "name": "Danish Blueberry", "category": "Pastry", "price": 25000, "unit": "pcs", "recipe": "danish_blueberry", "base_daily_sales": 11 },
+    { "id": "nastar", "name": "Nastar Premium", "category": "Kue Kering", "price": 135000, "unit": "toples 500g", "recipe": "nastar", "base_daily_sales": 6 },
+    { "id": "kastengel", "name": "Kastengel Keju Edam", "category": "Kue Kering", "price": 145000, "unit": "toples 500g", "recipe": "kastengel", "base_daily_sales": 5 },
+    { "id": "putri_salju", "name": "Putri Salju", "category": "Kue Kering", "price": 115000, "unit": "toples 500g", "recipe": "putri_salju", "base_daily_sales": 3 },
+    { "id": "lidah_kucing", "name": "Lidah Kucing", "category": "Kue Kering", "price": 110000, "unit": "toples 500g", "recipe": "lidah_kucing", "base_daily_sales": 2 },
+    { "id": "choco_cookies", "name": "Choco Chip Cookies", "category": "Kue Kering", "price": 95000, "unit": "toples 500g", "recipe": "choco_cookies", "base_daily_sales": 4 },
+    { "id": "custom_cake", "name": "Custom Cake 20cm", "category": "Custom Cake", "price": 350000, "unit": "cake", "recipe": "custom_cake", "base_daily_sales": 2 },
+    { "id": "red_velvet", "name": "Red Velvet Cake 20cm", "category": "Custom Cake", "price": 385000, "unit": "cake", "recipe": "red_velvet", "base_daily_sales": 1.5 },
+    {
+      "id": "hampers_lebaran", "name": "Hampers Lebaran Ketupat", "category": "Hampers", "price": 375000, "unit": "box",
+      "recipe": "hampers_pack", "base_daily_sales": 1.2,
+      "bundle": [ { "product": "nastar", "qty": 1 }, { "product": "kastengel", "qty": 1 } ]
+    },
+    {
+      "id": "hampers_natal", "name": "Hampers Natal Snowy", "category": "Hampers", "price": 345000, "unit": "box",
+      "recipe": "hampers_pack", "base_daily_sales": 0.8,
+      "bundle": [ { "product": "putri_salju", "qty": 1 }, { "product": "choco_cookies", "qty": 1 } ]
+    },
+    {
+      "id": "hampers_imlek", "name": "Hampers Imlek Prosperity", "category": "Hampers", "price": 395000, "unit": "box",
+      "recipe": "hampers_pack", "base_daily_sales": 0.6,
+      "bundle": [ { "product": "nastar", "qty": 1 }, { "product": "lidah_kucing", "qty": 1 } ]
+    }
+  ]
+}
