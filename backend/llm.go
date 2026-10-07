@@ -18,7 +18,12 @@ type LLM struct {
 	model     string
 	effort    string
 	fallbacks bool
+	// openRouter = true bila memakai OpenRouter (endpoint kompatibel Anthropic Messages).
+	// Fitur khusus Anthropic (effort, server-side fallback, structured output) dimatikan.
+	openRouter bool
 }
+
+const openRouterBaseURL = "https://openrouter.ai/api/"
 
 func NewLLM(apiKey, model, effort string, fallbacks bool) *LLM {
 	return &LLM{
@@ -29,7 +34,25 @@ func NewLLM(apiKey, model, effort string, fallbacks bool) *LLM {
 	}
 }
 
+// NewOpenRouterLLM memakai OpenRouter lewat endpoint /v1/messages yang kompatibel
+// dengan Anthropic SDK. Model memakai format OpenRouter, mis. "anthropic/claude-opus-5-5".
+func NewOpenRouterLLM(apiKey, model string) *LLM {
+	return &LLM{
+		client: anthropic.NewClient(
+			option.WithBaseURL(openRouterBaseURL),
+			option.WithAuthToken(apiKey),
+			option.WithHeader("HTTP-Referer", "https://github.com/andreanpradana/gusteebakeryoffice"),
+			option.WithHeader("X-Title", "Gustee Bakery Office"),
+		),
+		model:      model,
+		openRouter: true,
+	}
+}
+
 func (l *LLM) requestOptions(extra ...option.RequestOption) []option.RequestOption {
+	if l.openRouter {
+		return extra
+	}
 	opts := []option.RequestOption{option.WithJSONSet("output_config.effort", l.effort)}
 	if l.fallbacks {
 		// Jika permintaan ditolak oleh safety classifier, server otomatis mengulang
@@ -177,9 +200,15 @@ func (l *LLM) PlanJSON(ctx context.Context, system, user string, workerIDs []str
 		System:    []anthropic.TextBlockParam{{Text: system}},
 		Messages:  []anthropic.MessageParam{anthropic.NewUserMessage(anthropic.NewTextBlock(user))},
 	}
-	resp, err := l.client.Messages.New(ctx, params, l.requestOptions(
-		option.WithJSONSet("output_config.format", map[string]any{"type": "json_schema", "schema": schema}),
-	)...)
+	var extra []option.RequestOption
+	if l.openRouter {
+		// Structured output belum tentu didukung semua model di OpenRouter: minta JSON lewat prompt.
+		sb, _ := json.Marshal(schema)
+		params.System[0].Text += "\n\nBalas HANYA dengan satu objek JSON valid (tanpa markdown, tanpa teks lain) sesuai JSON Schema berikut:\n" + string(sb)
+	} else {
+		extra = append(extra, option.WithJSONSet("output_config.format", map[string]any{"type": "json_schema", "schema": schema}))
+	}
+	resp, err := l.client.Messages.New(ctx, params, l.requestOptions(extra...)...)
 	if err != nil {
 		return nil, describeErr(err)
 	}
@@ -193,10 +222,19 @@ func (l *LLM) PlanJSON(ctx context.Context, system, user string, workerIDs []str
 		}
 	}
 	var p Plan
-	if err := json.Unmarshal([]byte(text.String()), &p); err != nil {
+	if err := json.Unmarshal([]byte(extractJSON(text.String())), &p); err != nil {
 		return nil, fmt.Errorf("rencana CEO bukan JSON valid: %w", err)
 	}
 	return &p, nil
+}
+
+// extractJSON mengambil objek JSON terluar dari teks (mis. bila model membungkusnya dengan ```json).
+func extractJSON(s string) string {
+	start, end := strings.Index(s, "{"), strings.LastIndex(s, "}")
+	if start < 0 || end <= start {
+		return s
+	}
+	return s[start : end+1]
 }
 
 func describeErr(err error) error {

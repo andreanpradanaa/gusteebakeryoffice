@@ -55,6 +55,12 @@ func main() {
 	model := env("CLAUDE_MODEL", "claude-opus-5-5")
 	effort := env("CLAUDE_EFFORT", "medium")
 	fallbacks := env("CLAUDE_FALLBACKS", "on") != "off"
+	// LLM_PROVIDER: anthropic (default) | openrouter
+	provider := strings.ToLower(env("LLM_PROVIDER", "anthropic"))
+	if provider == "openrouter" {
+		apiKey = env("OPENROUTER_API_KEY", "")
+		model = env("OPENROUTER_MODEL", "anthropic/claude-opus-5-5")
+	}
 	if env("DEMO_MODE", "") == "1" {
 		apiKey = ""
 	}
@@ -79,7 +85,11 @@ func main() {
 	var llm *LLM
 	mode := "demo"
 	if apiKey != "" {
-		llm = NewLLM(apiKey, model, effort, fallbacks)
+		if provider == "openrouter" {
+			llm = NewOpenRouterLLM(apiKey, model)
+		} else {
+			llm = NewLLM(apiKey, model, effort, fallbacks)
+		}
 		mode = "llm"
 	}
 	hub := NewHub(store, reg, mode, model)
@@ -108,7 +118,7 @@ func main() {
 	}
 
 	if mode == "llm" {
-		log.Printf("🤖 Mode LLM aktif — model %s, effort %s", model, effort)
+		log.Printf("🤖 Mode LLM aktif — provider %s, model %s, effort %s", provider, model, effort)
 	} else {
 		log.Printf("🧁 Mode DEMO (tanpa API key) — jawaban agen dibuat dari template + data database")
 	}

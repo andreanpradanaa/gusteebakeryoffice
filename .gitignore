@@ -1,5 +1,29 @@
+# Dependensi & build
 node_modules/
 dist/
-.env
+coverage/
+*.tsbuildinfo
+backend/coverage.out
+backend/gustee-bakery-office
+
+# Database lokal (SQLite)
 *.db
 *.db-*
+
+# Rahasia — .env.example tetap di-commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Claude Code: override personal (folder .claude/ dan CLAUDE.md tetap di-commit)
+.claude/settings.local.json
+.claude/worktrees/
+CLAUDE.local.md
+
+# Graphify (dibangun ulang lokal)
+graphify-out/
+
+# OS / editor
+.DS_Store

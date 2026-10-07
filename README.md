@@ -170,6 +170,9 @@ Untuk menambah **ruangan** baru, tambahkan entri `ROOMS` (+ pintu di `DOORS`, fu
 | `DB_PATH` | `gustee.db` | file SQLite |
 | `SEED_FILE` | `data/seed.json` | sumber data contoh |
 | `AGENTS_DIR` | `agents` | folder registry & prompt agen |
+| `LLM_PROVIDER` | `anthropic` | `anthropic` atau `openrouter` |
+| `OPENROUTER_API_KEY` | – | API key OpenRouter (bila `LLM_PROVIDER=openrouter`) |
+| `OPENROUTER_MODEL` | `anthropic/claude-opus-5-5` | model format OpenRouter, mis. `openai/gpt-5`. Effort, fallback & structured output khusus Anthropic dinonaktifkan |
 | `CLAUDE_FALLBACKS` | `on` | fallback model otomatis di sisi server bila permintaan ditolak classifier |
 | `STATIC_DIR` | `../frontend/dist` | build frontend yang disajikan backend |
 | `CORS_ORIGIN` | `*` | batasi origin bila backend diakses langsung |
