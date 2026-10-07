@@ -41,6 +41,9 @@ Perintah → CEO merencanakan (sub-tugas) → rapat di ruang meeting → agen ke
 - **Design token:** `frontend/tailwind.config.js` (krem, cokelat roti, peach, hijau pastel) + palet canvas di `src/game/renderer.ts`.
 - **Endpoint per screen:** TaskInput → `POST /api/tasks`; DataPanel → `GET /api/data/*`; semua panel → SSE `/api/events`.
 
+## Fitur direncanakan
+- [Desain menu baru → approval → WhatsApp](desain-menu-baru/spec.md) — Draft, 4 tahap.
+
 ## Pertanyaan terbuka
 1. Apakah ada desain Figma resmi, atau UI saat ini menjadi acuan?
 2. Fitur berikutnya yang diprioritaskan (CRUD data bakery, penjualan nyata, auth, riwayat tugas)?

@@ -1,6 +1,6 @@
 # Progres — Gustee Bakery Office
 
-**Tanggal:** 2026-10-07 · **Total:** 30/44 task (68%)
+**Tanggal:** 2026-10-07 · **Total:** 30/49 task (61%)
 Sumber: kode saat ini (belum ada Figma). Perbarui setiap selesai `/feature`.
 
 | Prio | Fitur | Progres | % | x/y | Status |
@@ -12,6 +12,7 @@ Sumber: kode saat ini (belum ada Figma). Perbarui setiap selesai `/feature`.
 | P1 | Tab Data bakery | ██████████ | 100% | 4/4 | Selesai |
 | P1 | Kualitas & test | █░░░░░░░░░ | 14% | 1/7 | Berjalan |
 | P2 | Pengembangan lanjutan | ██░░░░░░░░ | 25% | 1/4 | Berjalan |
+| P1 | Desain menu baru → WhatsApp | ░░░░░░░░░░ | 0% | 0/5 | Belum mulai |
 
 **Legenda:** Belum mulai · Berjalan · Selesai · Terblokir. Bar = 10 blok (1 blok = 10%).
 
@@ -72,3 +73,11 @@ Sumber: kode saat ini (belum ada Figma). Perbarui setiap selesai `/feature`.
 - [ ] CRUD data bakery dari UI
 - [ ] Penjualan nyata / mutasi stok (G4)
 - [ ] Retensi riwayat tugas (G5)
+
+## Desain menu baru → WhatsApp
+Spec: [features/desain-menu-baru/spec.md](features/desain-menu-baru/spec.md)
+- [ ] Tahap 1: brief desain JSON dari Marketing (+ mode demo, kartu di Hasil Kerja)
+- [ ] Tahap 2: generator poster (feed + story) + Setujui/Revisi + simpan produk & resep ke DB
+- [ ] Tahap 2b: generator foto produk (provider bisa diganti, fallback unggah manual)
+- [ ] Tahap 3: Canva Autofill — ditunda (butuh Enterprise, Pro tidak cukup)
+- [ ] Tahap 4: kirim WhatsApp (Meta Cloud API)
